@@ -120,6 +120,7 @@ body {
 	font-size: 1.6rem;
 	line-height: 1.5;
 	overflow: hidden;
+	height: 300vh;
 }
 
 body.loaded {
@@ -217,7 +218,6 @@ body.nav-active {
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
-.overlay,
 .header .btn {
 	display: none;
 }
@@ -293,6 +293,28 @@ body.nav-active {
 
 .navbar-link {
 	padding-block: 8px;
+	transition: var(--transition);
+}
+
+.navbar-link:is(:hover, :focus-visible) {
+	color: var(--oxford-blue);
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: var(--black);
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition);
+}
+
+.overlay.active {
+	opacity: 0.6;
+	visibility: visible;
 }
 
 /*-----------------------------------*\
