@@ -605,6 +605,19 @@ body.nav-active {
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
+.cta {
+	background: var(--keppei);
+	padding: 48px 24px;
+	text-align: center;
+}
+
+.cta .headline-md {
+	color: var(--white);
+}
+
+.cta .btn {
+	margin-inline: auto;
+}
 
 /*-----------------------------------*\
   #FOOTER
