@@ -269,8 +269,16 @@ body.nav-active {
 	transition: var(--transition);
 }
 
-.card:is(:hover, :focus-visible) {
+.card:is(:hover, :focus-within) {
 	box-shadow: var(--shadow-1);
+}
+
+.layer-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /*-----------------------------------*\
@@ -451,6 +459,28 @@ body.nav-active {
 /*-----------------------------------*\
   #CATEGORY
 \*-----------------------------------*/
+.category .grid-list {
+	padding-block: 40px 52px;
+}
+
+.category-card {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	border-inline-start: 4px solid transparent;
+}
+
+.category-card:is(:hover, :focus-within) {
+	border-inline-start: 4px solid var(--light-coral);
+}
+
+.category-card .title-sm {
+	margin-block-start: 4px;
+}
+
+.category .btn {
+	margin-inline: auto;
+}
 
 /*-----------------------------------*\
   #ABOUT
