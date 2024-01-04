@@ -637,7 +637,7 @@ body.nav-active {
 }
 
 .footer-list-title {
-	margin-block: 32px;
+	margin-block-end: 32px;
 }
 
 .footer-link {
@@ -668,6 +668,249 @@ body.nav-active {
   #CONTAINER QUERIES
 \*-----------------------------------*/
 
+/**
+	* container query for card
+	*/
+.card-container {
+	container-type: inline-size;
+}
+
+@container (min-width: 500px) {
+	.course-card {
+		flex-direction: row;
+	}
+	.course-card .card-banner {
+		width: 160px;
+		flex-shrink: 0;
+	}
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/**
+	* reponsive for large than 575px screen
+	*/
+@media (min-width: 575px) {
+	/**
+	* REUSED STYLES
+	*/
+	.container {
+		max-width: 640px;
+		width: 100%;
+		margin-inline: auto;
+	}
+
+	.card {
+		padding: 32px;
+	}
+
+	/**
+	* Footer
+	*/
+	.footer-top .container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/**
+	* reponsive for large than 768px screen
+	*/
+@media (min-width: 768px) {
+	/**
+	* CUSTOM PROPERTY
+	*/
+	:root {
+		/**
+	* Typography
+	*/
+		--headline-lg: 6rem;
+		--headline-md: 3.8rem;
+
+		/**
+	* Spacing
+	*/
+		--section-padding: 80px;
+	}
+
+	/**
+	* REUSED STYLES
+	*/
+	.container {
+		max-width: 768px;
+	}
+
+	.grid-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/**
+	* CTA
+	*/
+	.cta {
+		padding-block: 78px;
+	}
+}
+
+/**
+	* reponsive for large than 992px screen
+	*/
+@media (min-width: 992px) {
+	:root {
+		/**
+	* Typography
+	*/
+		--headline-lg: 7.7rem;
+		--headline-md: 4.4rem;
+
+		/**
+	* Spacing
+	*/
+		--section-padding: 120px;
+	}
+
+	/**
+	* REUSED STYLES
+	*/
+	.container {
+		max-width: 1024px;
+	}
+
+	.btn {
+		padding: 16px 32px;
+		font-size: 1.8rem;
+	}
+
+	/**
+	* HEADER
+	*/
+	.nav-open-btn,
+	.overlay,
+	.navbar-top {
+		display: none;
+	}
+
+	.navbar,
+	.navbar.active {
+		all: unset;
+		display: block;
+	}
+
+	.navbar-list {
+		display: flex;
+		gap: 8px;
+	}
+
+	.navbar-item:not(:last-child) {
+		border-block-end: none;
+	}
+
+	.navbar-link {
+		padding: 8px 16px;
+	}
+
+	.header .btn {
+		display: block;
+		box-shadow: none;
+	}
+
+	/**
+	* CATEGORY
+	*/
+	.grid-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/**
+	* ABOUT
+	*/
+	.about .container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/**
+	* COURSES
+	*/
+	.course .grid-list {
+		grid-template-columns: repeat(2, 1fr);
+		margin-block: 40px 48px;
+	}
+
+	/**
+	* FOOTER
+	*/
+	.footer-top .container {
+		grid-template-columns: 1fr 0.5fr 0.5fr 0.8fr;
+	}
+
+	.footer-brand {
+		padding-inline-end: 24px;
+	}
+}
+
+/**
+	* reponsive for large than 1200px screen
+	*/
+@media (min-width: 1200px) {
+	/**
+	* REUSED STYLES
+	*/
+	.container {
+		max-width: 1170px;
+	}
+
+	/**
+	* HERO
+	*/
+	.hero-banner {
+		display: block;
+		max-width: max-content;
+		margin-inline-end: -14%;
+	}
+
+	.hero .container {
+		display: grid;
+		grid-template-columns: 1fr 0.9fr;
+		gap: 48px;
+	}
+
+	.hero .title-md {
+		margin-block: 40px 60px;
+	}
+
+	/**
+	* ABOUT
+	*/
+	.about .container {
+		grid-template-columns: 1fr 0.7fr;
+	}
+
+	/**
+	* CTA
+	*/
+	.cta {
+		text-align: left;
+	}
+
+	.cta .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.cta .headline-md {
+		max-width: 22ch;
+	}
+
+	.cta .btn {
+		margin-inline: 0;
+	}
+
+	/**
+	* FOOTER
+	*/
+	.footer .container {
+		gap: 48px;
+	}
+}
